@@ -1,11 +1,19 @@
 <script setup>
 import Container from "./Container.vue";
+import UserBar from "./UserBar.vue";
 </script>
 
 <template>
   <Container>
     <div class="profile-container">
-      <h1>USERBAR</h1>
+      <UserBar
+        :username="SanazBahmani"
+        :userInfo="{
+          posts: 4,
+          followers: 100,
+          following: 300,
+        }"
+      />
       <h1>IMAGE GALLERY</h1>
     </div>
   </Container>
@@ -15,7 +23,6 @@ import Container from "./Container.vue";
 .profile-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 20px 0;
 }
 </style>
